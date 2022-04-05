@@ -1,0 +1,49 @@
+{
+  "name": "stock-trades",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --ignore-watch node_modules src/infra/http/server.ts",
+    "preprod": "npx prisma migrate deploy",
+    "prod": "node ./dist/infra/http/server.js",
+    "migration:save": "npx prisma migrate dev --name create-tables",
+    "migration:reset": "npx prisma migrate reset",
+    "build": "npx prisma generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bboa3/stock-trades.git"
+  },
+  "keywords": [
+    "Stock, Trades"
+  ],
+  "author": "Arlindo Boa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bboa3/stock-trades/issues"
+  },
+  "homepage": "",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "dotenv-expand": "^5.1.0",
+    "fp-ts": "^2.11.8",
+    "io-ts": "^2.2.16",
+    "io-ts-types": "^0.5.16"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.5"
+  }
+}
