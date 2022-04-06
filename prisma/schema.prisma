@@ -28,6 +28,6 @@ model Trade {
   price               Decimal
   user                User              @relation(fields: [userId], references: [id])
   userId              Int
-  timestamp           DateTime          @default(now())
+  timestamp           String      
   @@map("trades")
 }

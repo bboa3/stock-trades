@@ -5,9 +5,9 @@ import { CreateTradesValidator } from '@domain/Contracts/CreateTrades'
 import { ValidationError } from '@services/errors/validation_error'
 import { TradeCodec } from '@domain/requiredFields/trade'
 
-export const createTradesValidator: CreateTradesValidator = (data) => {
+export const createTradesValidator: CreateTradesValidator = (trade) => {
   return pipe(
-    data,
+    trade,
     TradeCodec.decode,
     E.mapLeft(errors => new ValidationError('Invalid ' + failure(errors).join(' ,')))
   )
