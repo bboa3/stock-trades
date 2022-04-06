@@ -12,36 +12,10 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@core/*": ["src/core/*"],
-      "@monetary/domain/*": ["src/workflow/monetary/domain/*"],
-      "@monetary/infra/*": ["src/workflow/monetary/infra/*"],
-      "@monetary/services/*": ["src/workflow/monetary/services/*"],
-      "@monetary/useCases/*": ["src/workflow/monetary/useCases/*"],
-
-      "@exchange/domain/*": ["src/workflow/exchange/domain/*"],
-      "@exchange/infra/*": ["src/workflow/exchange/infra/*"],
-      "@exchange/services/*": ["src/workflow/exchange/services/*"],
-      "@exchange/useCases/*": ["src/workflow/exchange/useCases/*"],
-
-      "@fiscal/domain/*": ["src/workflow/fiscal/domain/*"],
-      "@fiscal/infra/*": ["src/workflow/fiscal/infra/*"],
-      "@fiscal/services/*": ["src/workflow/fiscal/services/*"],
-      "@fiscal/useCases/*": ["src/workflow/fiscal/useCases/*"],
-
-      "@demography/domain/*": ["src/workflow/demography/domain/*"],
-      "@demography/infra/*": ["src/workflow/demography/infra/*"],
-      "@demography/services/*": ["src/workflow/demography/services/*"],
-      "@demography/useCases/*": ["src/workflow/demography/useCases/*"],
-
-      "@housing/domain/*": ["src/workflow/housing/domain/*"],
-      "@housing/infra/*": ["src/workflow/housing/infra/*"],
-      "@housing/services/*": ["src/workflow/housing/services/*"],
-      "@housing/useCases/*": ["src/workflow/housing/useCases/*"],
-
-      "@business/domain/*": ["src/workflow/business/domain/*"],
-      "@business/infra/*": ["src/workflow/business/infra/*"],
-      "@business/services/*": ["src/workflow/business/services/*"],
-      "@business/useCases/*": ["src/workflow/business/useCases/*"]
+      "@domain/*": ["src/domain/*"],
+      "@infra/*": ["src/infra/*"],
+      "@services/*": ["src/services/*"],
+      "@useCases/*": ["src/useCases/*"],
     },
     "strict": false,
     "lib": ["esnext"],

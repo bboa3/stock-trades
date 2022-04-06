@@ -28,6 +28,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
+    "fastify": "^3.28.0",
     "fp-ts": "^2.11.8",
     "io-ts": "^2.2.16",
     "io-ts-types": "^0.5.16"
