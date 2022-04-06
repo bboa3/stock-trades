@@ -4,5 +4,5 @@ import { Trade } from '@domain/requiredFields/trade'
 
 export type GetTradesDB = () => Promise<Trade[]>
 
-export type GetTradesService = (getTradesDB: GetTradesDB) =>
+export type GetTradesService = (db: GetTradesDB) =>
 TE.TaskEither<HttpErrorResponse, Trade[]>
