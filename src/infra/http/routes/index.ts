@@ -1,10 +1,15 @@
 import { FastifyPluginCallback } from 'fastify'
-import { erasingTradesOpts } from '@infra/http/routes/opts/erasing-trades-opts'
+import { erasingTradesController } from '@infra/http/controller/erasing-trades'
 
-export const Router: FastifyPluginCallback = (app, _option, done) => {
-  app.get('/', erasingTradesOpts, async (request, response) => {
-    return { pong: 'it worked!' }
-  })
+export const TradesRouter: FastifyPluginCallback = (app, _option, done) => {
+  app.delete('/erase', erasingTradesController)
+  app.post('/trades', erasingTradesController)
+  app.get('/trades', erasingTradesController)
+  app.get('/trades/users/:userId', erasingTradesController)
+  // start={startDate}&end={endDate}
+  app.get('/stocks/:stockSymbol/price', erasingTradesController)
+  // start={startDate}&end={endDate}
+  app.get('/stocks/stats', erasingTradesController)
 
   done()
 }
