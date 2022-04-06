@@ -25,9 +25,9 @@ model Trade {
   type                String     
   symbol              String
   shares              Int
-  price               BigInt
+  price               Decimal
   user                User              @relation(fields: [userId], references: [id])
   userId              Int
-  createdAt           DateTime          @default(now())
+  timestamp           DateTime          @default(now())
   @@map("trades")
 }

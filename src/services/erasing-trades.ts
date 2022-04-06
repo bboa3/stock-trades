@@ -9,7 +9,7 @@ export const erasingTradesService: ErasingTradesService = (erasingTradesDB) => {
 
     (err) => {
       console.log(err)
-      return fail(new DatabaseFailError('Oops! Erro. Por favor contacte suporte'))
+      return fail(new DatabaseFailError('Oops! Error. contact support'))
     }
   )
 }
