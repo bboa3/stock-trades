@@ -9,7 +9,7 @@ export const createTradesService: CreateTradesService = (createTradesDB) => (dat
 
     (err: Error) => {
       if (err.name === 'EntityAlreadyExist') {
-        return clientError(err as Error)
+        return clientError(err)
       }
 
       console.log(err)

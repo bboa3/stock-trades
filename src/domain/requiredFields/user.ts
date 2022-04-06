@@ -7,3 +7,7 @@ export const UserCodec = t.type({
 })
 
 export type User = t.TypeOf<typeof UserCodec>
+
+export const UserIdCodec = t.type({
+  id: t.number
+})
