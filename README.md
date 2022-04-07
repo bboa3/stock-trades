@@ -50,133 +50,51 @@ stock symbol for the period in the given date range
 ### Directories 
 Organized following Domain Driven Design and Functional Programming
 
+```bash
 C:.
-|   .env.example
-|   .eslintrc.json
-|   .gitignore
-|   package-lock.json
-|   package.json
-|   README.md
-|   Resultant.txt
-|   tsconfig.json
-|   
 +---prisma
-|   |   schema.prisma
-|   |   stock.db
 |   |   
 |   \---migrations
-|       |   migration_lock.toml
 |       |   
 |       \---20220407151319_create_tables
-|               migration.sql
 |               
 \---src
-    +---@types
     +---domain
     |   +---Contracts
-    |   |       CreateTrades.ts
-    |   |       ErasingTrades.ts
-    |   |       FindOrCreateUser.ts
-    |   |       GetCountDailyFluctuations.ts
-    |   |       GetHighestAndLowestPrice.ts
-    |   |       GetTrades.ts
-    |   |       GetTradesByUserId.ts
     |   |       
     |   +---entities
-    |   |   |   create-trades.ts
-    |   |   |   erasing-trades.ts
-    |   |   |   find-or-create-user.ts
-    |   |   |   get-count-daily-fluctuations.ts
-    |   |   |   get-highest-and-lowest-price.ts
-    |   |   |   get-trades-by-user-id.ts
-    |   |   |   get-trades.ts
     |   |   |   
     |   |   \---errors
-    |   |           db_error.ts
     |   |           
     |   +---errors
-    |   |       domain_error.ts
     |   |       
     |   \---requiredFields
-    |       |   count-daily-fluctuations.ts
-    |       |   date.ts
-    |       |   highest-and-lowests-price.ts
-    |       |   name.ts
-    |       |   price.ts
-    |       |   shares-number.ts
-    |       |   stock-symbol.ts
-    |       |   timestamp.ts
-    |       |   trade-type.ts
-    |       |   trade.ts
-    |       |   user.ts
     |       |   
     |       \---is
-    |               is-date.ts
-    |               is-name.ts
-    |               is-price.ts
-    |               is-shares-number.ts
-    |               is-stock-symbol.ts
-    |               is-timestamp.ts
-    |               is-trade-type.ts
     |               
     +---infra
     |   +---http
-    |   |   |   app.ts
-    |   |   |   server.ts
     |   |   |   
     |   |   +---controller
-    |   |   |       create-trades.ts
-    |   |   |       erasing-trades.ts
-    |   |   |       get-count-daily-fluctuations.ts
-    |   |   |       get-highest-and-lowest-price.ts
-    |   |   |       get-trades-by-user-id.ts
-    |   |   |       get-trades.ts
     |   |   |       
     |   |   \---routes
-    |   |           index.ts
     |   |           
     |   +---middleware
-    |   |       http_error_response.ts
-    |   |       http_success_response.ts
-    |   |       Middleware.ts
     |   |       
     |   \---prisma
-    |           client.ts
     |           
     +---services
-    |   |   create-trades.ts
-    |   |   erasing-trades.ts
-    |   |   get-count-daily-fluctuations.ts
-    |   |   get-highest-and-lowest-price.ts
-    |   |   get-trades-by-user-id.ts
-    |   |   get-trades.ts
     |   |   
     |   +---dates
-    |   |       is-between-date-range.ts
     |   |       
     |   +---errors
-    |   |       service-error.ts
-    |   |       validation-error.ts
     |   |       
     |   +---prices
-    |   |       count-daily-fluctuations.ts
-    |   |       highest-and-lowest-price.ts
     |   |       
     |   \---validate
-    |           create-trades.ts
-    |           get-count-daily-fluctuations.ts
-    |           get-highest-and-lowest-price.ts
-    |           get-trades-by-user-id.ts
     |           
     \---useCases
-            create-trades.ts
-            erasing-trades.ts
-            get-count-daily-fluctuations.ts
-            get-highest-and-lowest-price.ts
-            get-trades-by-user-id.ts
-            get-trades.ts
-            
-
+```
 
 
 ## Skipped
@@ -187,13 +105,17 @@ The was project was developed using Postgres Database and also created UI charts
 
 [Node.js](https://nodejs.org/) and NPM are required to run.
 
+## Production
 ```bash
-> git clone https://github.com/bboa3/.git
+# Create Migration, Create Build and Start the application
+> `npm run prod`  ou `yarn prod`
 ```
 
+## Development
 ```bash
-# 
-> `npm run knex:migrate`  ou `yarn knex:migrate`
+# Create Migration 
+> `npm run migration:save`  ou `yarn migration:save`
 
-# para iniciar o servidor
-> `npm
+# Create Build and start the application
+> `npm run dev`  ou `yarn dev`
+```
