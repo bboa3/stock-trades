@@ -15,11 +15,11 @@
       "@domain/*": ["src/domain/*"],
       "@infra/*": ["src/infra/*"],
       "@services/*": ["src/services/*"],
-      "@useCases/*": ["src/useCases/*"],
+      "@useCases/*": ["src/useCases/*"]
     },
     "strict": false,
     "lib": ["esnext"],
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "include": [
     "src"
