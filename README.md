@@ -9,27 +9,27 @@ Brokerage company's accounts and trading management platform
 
 ## Features
 
-- Add new trades
+Add new trades
 ```sh
     POST request at /trades
 ```
-- Return all the trades
+Return all the trades
 ```sh
     GET request at /trades
 ```
-- Erase all the trades
+Erase all the trades
 ```sh
     DELETE request at /erase
 ```
-- Return trade records filtered by the user ID
+Return trade records filtered by the user ID
 ```sh
     GET request at /trades/users/{userID}
 ```
-- Return the highest and lowest price for the stock symbol in the given date range
+Return the highest and lowest price for the stock symbol in the given date range
 ```sh
     GET request at /stocks/{stockSymbol}/price?start={startDate}&end={endDate}
 ```
-- Return the fluctuations count, maximum daily rise and maximum daily fall for each
+Return the fluctuations count, maximum daily rise and maximum daily fall for each
 stock symbol for the period in the given date range
 ```sh
      GET request at /stocks/stats?start={startDate}&end={endDate}
