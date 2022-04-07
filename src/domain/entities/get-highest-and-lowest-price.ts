@@ -1,7 +1,7 @@
 import { GetHighestAndLowestPriceDB } from '@domain/contracts/GetHighestAndLowestPrice'
 import { Trade } from '@domain/requiredFields/trade'
 import { prisma } from '@infra/prisma/client'
-import { EntityNotFoundError } from './errors/db_error'
+import { EntityNotFoundError } from '@domain/entities/errors/db_error'
 
 export const getHighestAndLowestPriceDB: GetHighestAndLowestPriceDB = async ({ stockSymbol }) => {
   const trades = await prisma.trade.findMany({
