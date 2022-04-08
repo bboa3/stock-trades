@@ -10,7 +10,7 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --ignore-watch node_modules src/infra/http/server.ts",
     "migration:save": "npx prisma migrate dev --name create-tables",
     "migration:reset": "npx prisma migrate reset",
-    "test": "test"
+    "test": "test" 
   },
   "repository": {
     "type": "git",
