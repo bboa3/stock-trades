@@ -40,7 +40,7 @@ stock symbol for the period in the given date range
   - [Node.js](https://nodejs.org/en/)
   - [Typescript](https://www.typescriptlang.org/)
   - [Fastify](https://www.fastify.io/)
-  - [fp-ts](https://gcanti.github.io/fp-ts/) for functional programming in TypesScript
+  - [fp-ts](https://gcanti.github.io/fp-ts/) for functional programming in TypeScript
 - Database
   - [Sqlite](https://sqlite.org/)
   - [Prisma](https://www.prisma.io/)
